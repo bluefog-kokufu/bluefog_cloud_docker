@@ -1,0 +1,3 @@
+[submodule "bluefog_cloud_laravel"]
+	path = bluefog_cloud_laravel
+	url = ./bluefog_cloud_laravel
