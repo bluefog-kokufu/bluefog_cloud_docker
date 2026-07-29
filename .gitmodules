@@ -1,3 +1,6 @@
 [submodule "bluefog_cloud_laravel"]
 	path = bluefog_cloud_laravel
 	url = ./bluefog_cloud_laravel
+[submodule "bluefog_cloud_document"]
+	path = bluefog_cloud_document
+	url = git@github.com:bluefog-kokufu/bluefog_cloud_document.git
