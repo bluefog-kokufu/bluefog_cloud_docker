@@ -1,4 +1,4 @@
-FROM php:8.3-apache
+FROM php:8.4-apache
 
 # 必要なパッケージとPHP拡張モジュールのインストール
 RUN apt-get update && apt-get install -y \
@@ -10,6 +10,10 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libzip-dev \
  && docker-php-ext-install pdo_mysql mbstring gd zip bcmath
+
+# xdebugのインストールと有効化
+RUN pecl install xdebug \
+ && docker-php-ext-enable xdebug
 
 # Apacheの mod_rewrite モジュールを有効化（Laravelのルーティングに必須）
 RUN a2enmod rewrite
