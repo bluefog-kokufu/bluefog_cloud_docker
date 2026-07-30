@@ -15,6 +15,10 @@ RUN apt-get update && apt-get install -y \
 RUN pecl install xdebug \
  && docker-php-ext-enable xdebug
 
+# Node.js 22 LTSを追加
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs
+
 # Apacheの mod_rewrite モジュールを有効化（Laravelのルーティングに必須）
 RUN a2enmod rewrite
 
